@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 2</title>
+  </head>
+  <body>
+    <form style="border: 3px solid black; width: 400px; padding: 10px">
+      <label>Nom d'utilasateur</label><br />
+      <input type="text" id="nom" /><br />
+      <label>Mot de passe</label><br />
+      <input type="password" id="motPass" /><br />
+      Sexe H <input type="radio" name="sexe" id="H" /> F
+      <input type="radio" name="sexe" checked id="F" /> Fonction
+      <select id="fonction">
+        <option value="Etudiant">Etudiant</option>
+        <option value="Ingenieur">Ingenieur</option>
+        <option value="Enseignant">Enseignant</option>
+        <option value="Retraite">Retraite</option>
+        <option value="Autre">Autre</option>
+      </select>
+      <br />
+      <input type="submit" value="Envoyer" />
+      <input type="button" value="Annuler" />
+    </form>
+  </body>
+  <script src="../jquery.js"></script>
+  <script src="./Exercice2.js"></script>
+  <script>
+    $(function () {
+      $("input:submit").click(function (e) {
+        e.preventDefault();
+        //1.	Lire puis afficher le nom de l'utilisateur.
+        // var nom = $("#nom").val();
+        // alert(nom);
+        //
+        //2.	Lire puis afficher le mot de passe.
+        // var motPass = $("#motPass").val();
+        // alert(motPass);
+        //
+        //3.	Lire puis afficher l'état du bouton radio H. Renvoie true si le bouton est sélectionné, sinon false.
+        var etat = $("#H").checked();
+        alert(etat);
+      });
+    });
+  </script>
+</html>
